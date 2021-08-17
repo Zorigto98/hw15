@@ -4,6 +4,8 @@
 using namespace std;
 
 int main() {
+
+    cout << "Task 4" << endl;
     vector <int> vec = {-100,-50, -5, 1, 10, 15};
 
     for (int i=0; i<vec.size()/2; i++)

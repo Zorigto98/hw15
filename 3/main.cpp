@@ -29,10 +29,9 @@ int main() {
         }
         while (!checkInput);
 
-        cout << "end" << endl;
-
         if (vec[vec.size()-1]==-1)
         {
+            cout << "end" << endl;
             vec.pop_back();
 
             for (int i=0; i<vec.size(); i++)
