@@ -7,26 +7,24 @@ int main() {
 
     vector <int> vec = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
     int max_val=0;
-    int a=0, b=0;
+    int a=vec.size(), b=0;
+    int temp=0;
 
     for (int i=0; i<vec.size(); i++)
     {
-        for (int j=1; j<vec.size(); j++)
+        temp+=vec[i];
+        if (temp > max_val)
         {
-            if (vec[i]>0 && vec[j]>0)
-            {
-                int max_val_temp=0;
-                for (int k=i; k<=j; k++)
-                {
-                    max_val_temp+=vec[k];
-                }
-                if (max_val_temp>max_val)
-                {
-                    max_val=max_val_temp;
-                    a=i;
-                    b=j;
-                }
-            }
+            max_val = temp;
+            if (i<a) a=i;
+            if (i>b) b=i;
+        }
+
+        if (temp < 0)
+        {
+            temp = 0;
+            a=vec.size();
+            b=0;
         }
     }
 
